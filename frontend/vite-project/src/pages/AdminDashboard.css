@@ -1,0 +1,186 @@
+/* PAGE */
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f4f6fb;
+  padding: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* HEADER */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  font-size: 26px;
+  color: #333;
+}
+
+.logout-btn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e63b3d;
+  transform: scale(1.05);
+}
+
+/* FILTER */
+.filter-bar {
+  max-width: 300px;
+  margin-bottom: 25px;
+}
+
+.filter-bar label {
+  display: block;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: 600;
+}
+
+.filter-bar select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.incident-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.incident-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.4s ease;
+}
+
+.incident-card h4 {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.incident-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* META */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.category {
+  background: #eef1ff;
+  color: #4b5cff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}
+
+.status.Pending {
+  background: #ff9800;
+}
+
+.status.In-Review {
+  background: #2196f3;
+}
+
+.status.Resolved {
+  background: #4caf50;
+}
+
+/* REMARKS */
+.incident-card textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* ACTIONS */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.review-btn {
+  flex: 1;
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resolve-btn {
+  flex: 1;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.review-btn:hover,
+.resolve-btn:hover {
+  opacity: 0.9;
+}
+
+/* EMPTY */
+.empty {
+  text-align: center;
+  color: #777;
+  grid-column: 1 / -1;
+}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
